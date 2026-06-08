@@ -33,9 +33,9 @@ export default function App() {
         <h1>Splitwise</h1>
         <FriendList />
         {showAddFriend && <FormAddFriend />}
-        {!showAddFriend && (
-          <Button onClick={handleShowAddFriend}>+ Add Friend</Button>
-        )}
+        <Button onClick={handleShowAddFriend}>
+          {showAddFriend ? "Close" : "+ Add Friend"}
+        </Button>
       </div>
       <FormSplitBill />
     </div>
